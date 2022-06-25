@@ -46,6 +46,19 @@ const Verify = () => {
       body: JSON.stringify("0x872449c44937f6ac266cbbcdcb189b25acebb9e9"),
     });
   }
+  const handleImage = () => {
+    const data = {
+      'address': '0x50B80aa3877fC852f3194a0331177FDDcF0891bf',
+      'image_uri': 'https://api-us-west1.tatum.io/v3/ipfs/bafybeictvixj4ayyryj7jwvzsmtodiwafh4ghhkfudl3bt2cugafkjngg4'
+    }
+    fetch(`/api/storeimage`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    });
+  }
   
 
   return (
@@ -60,6 +73,11 @@ const Verify = () => {
         onClick={handleENS}
       >
         ens
+      </button>
+      <button
+        onClick={handleImage}
+      >
+        image
       </button>
     </div>
   )
