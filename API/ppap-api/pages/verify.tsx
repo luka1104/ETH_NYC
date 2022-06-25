@@ -27,11 +27,25 @@ const Verify = () => {
   //   //   console.log("success");
   //   // }
   // });
+  const handleClick = () => {
+    fetch(`/api/verifyAddress`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify("0x3f7E10eD4eac8c4a9c54ffbcD632215Aa78D598E"),
+    });
+  }
   
 
   return (
     <div>
       Verify
+      <button
+        onClick={handleClick}
+      >
+        Test
+      </button>
     </div>
   )
 }
