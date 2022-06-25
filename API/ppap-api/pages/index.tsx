@@ -36,7 +36,7 @@ const Home: NextPage = () => {
           <div id="world-id-container">
             <Link
               fontFamily='Dm Sans'
-              href={`https://developer.worldcoin.org/hosted/wid_c4a8f9955a2ab7a9d01b24f9c279c95d?signal=${address}`}
+              href={`https://developer.worldcoin.org/hosted/wid_ab0453f28199852b240ee140b5f10732?signal=${address}`}
             >
               Verify with World ID
             </Link>
