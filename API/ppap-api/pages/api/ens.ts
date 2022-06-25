@@ -1,7 +1,7 @@
 import { ethers } from 'ethers'
 import { NextApiRequest, NextApiResponse } from 'next';
 
-const provider = new ethers.providers.JsonRpcProvider("https://eth-goerli.alchemyapi.io/v2/yKp4_FehNB_rOc9ZMCDfnZtQ7rCrZ8WP")
+const provider = new ethers.providers.JsonRpcProvider(process.env.API_URL)
 
 const checkENS = async (address :string) => {
   var ensName = await provider.lookupAddress(address);
