@@ -1,7 +1,7 @@
 import React from 'react'
 import { useRouter } from "next/router";
 
-const verify = () => {
+const Verify = () => {
   const jwt = require('jsonwebtoken');
   const jwksClient = require('jwks-rsa');
   const client = jwksClient({ jwksUri: 'https://developer.worldcoin.org/api/v1/jwks'});
@@ -27,4 +27,4 @@ const verify = () => {
   )
 }
 
-export default verify
+export default Verify
