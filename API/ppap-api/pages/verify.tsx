@@ -36,6 +36,16 @@ const Verify = () => {
       body: JSON.stringify("0x872449c44937f6ac266cbbcdcb189b25acebb9e9"),
     });
   }
+
+  const handleENS = () => {
+    fetch(`/api/ens`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify("0x872449c44937f6ac266cbbcdcb189b25acebb9e9"),
+    });
+  }
   
 
   return (
@@ -45,6 +55,11 @@ const Verify = () => {
         onClick={handleClick}
       >
         Test
+      </button>
+      <button
+        onClick={handleENS}
+      >
+        ens
       </button>
     </div>
   )
