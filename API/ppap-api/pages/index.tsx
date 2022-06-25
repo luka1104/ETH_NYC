@@ -4,16 +4,29 @@ import Head from 'next/head'
 import {
   Link,
   Input,
+  Button
 } from '@chakra-ui/react';
 import styles from '../styles/Home.module.css'
+import { useRouter } from "next/router";
+
 
 const Home: NextPage = () => {
   var ethereum_address = require('ethereum-address');
+  const { query } = useRouter();
   const [address, setAddress] = useState<string>('')
   const handleInputChange = (e:any) => {
     const val = e.target.value;
     setAddress(val)
     console.log(val);
+  }
+  const handleClick = () => {
+    fetch(`/api/verify`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(address),
+    });
   }
   return (
     <div className={styles.container}>
@@ -36,13 +49,26 @@ const Home: NextPage = () => {
           <div id="world-id-container">
             <Link
               fontFamily='Dm Sans'
-              href={`https://developer.worldcoin.org/hosted/wid_ab0453f28199852b240ee140b5f10732?signal=${address}`}
+              href={`https://developer.worldcoin.org/hosted/wid_ef3f141924924f9cdaf593c3057affdb?signal=${address}`}
             >
               Verify with World ID
             </Link>
           </div>
         ) : (
           <></>
+        )}
+        {query.success === "true" ? (
+          <Button
+            onClick={handleClick}
+          >
+            Get Verification
+          </Button>
+        ) : (
+          <Button
+            disabled
+          >
+            Get Verification
+          </Button>
         )}
       </main>
     </div>
