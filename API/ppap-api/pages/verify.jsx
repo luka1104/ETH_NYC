@@ -7,14 +7,14 @@ const Verify = () => {
   const client = jwksClient({ jwksUri: 'https://developer.worldcoin.org/api/v1/jwks'});
   const { query } = useRouter();
 
-  const getKey = (header:any, callback:any) => {
-    client.getSigningKey(header.kid, function(err:any, key:any) {
+  const getKey = (header, callback) => {
+    client.getSigningKey(header.kid, function(err, key) {
       const signingKey = key.publicKey || key.rsaPublicKey;
       callback(null, signingKey);
     })
   }
 
-  jwt.verify(query.verification_jwt, getKey, function(err:any, decoded:any) {
+  jwt.verify(query.verification_jwt, getKey, function(err, decoded) {
     if(decoded.verified) {
       console.log("success");
     }
