@@ -1,0 +1,447 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5B2513C62867742300ABF7C7 /* PPAPApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2513C52867742300ABF7C7 /* PPAPApp.swift */; };
+		5B2513C82867742300ABF7C7 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2513C72867742300ABF7C7 /* MainView.swift */; };
+		5B2513CA2867742400ABF7C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B2513C92867742400ABF7C7 /* Assets.xcassets */; };
+		5B2513CD2867742400ABF7C7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B2513CC2867742400ABF7C7 /* Preview Assets.xcassets */; };
+		5B2513D52867873000ABF7C7 /* WalletConnectSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5B2513D42867873000ABF7C7 /* WalletConnectSwift */; };
+		5B2513D72867A96C00ABF7C7 /* WalletConnect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2513D62867A96C00ABF7C7 /* WalletConnect.swift */; };
+		5B2513D92867ACFE00ABF7C7 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2513D82867ACFE00ABF7C7 /* Extensions.swift */; };
+		5B2513DB2867C7CB00ABF7C7 /* HandshakeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2513DA2867C7CB00ABF7C7 /* HandshakeViewController.swift */; };
+		5B2513DD2867CB9500ABF7C7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2513DC2867CB9500ABF7C7 /* MainViewController.swift */; };
+		5B2513DF2867CBC800ABF7C7 /* ActionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2513DE2867CBC800ABF7C7 /* ActionsViewController.swift */; };
+		5B2513E32868004000ABF7C7 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 5B2513E22868004000ABF7C7 /* Alamofire */; };
+		5B2513E6286802F800ABF7C7 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5B2513E5286802F800ABF7C7 /* FirebaseFirestoreSwift */; };
+		5B2513EA286807CA00ABF7C7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5B2513E9286807CA00ABF7C7 /* GoogleService-Info.plist */; };
+		5B2513EC28680EC400ABF7C7 /* ShakeEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2513EB28680EC400ABF7C7 /* ShakeEffect.swift */; };
+		5B2513EE28681D3B00ABF7C7 /* FrensView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2513ED28681D3B00ABF7C7 /* FrensView.swift */; };
+		5B2513F0286820C200ABF7C7 /* ImportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2513EF286820C200ABF7C7 /* ImportView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5B2513C22867742300ABF7C7 /* PPAP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PPAP.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B2513C52867742300ABF7C7 /* PPAPApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PPAPApp.swift; sourceTree = "<group>"; };
+		5B2513C72867742300ABF7C7 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		5B2513C92867742400ABF7C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5B2513CC2867742400ABF7C7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5B2513D62867A96C00ABF7C7 /* WalletConnect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletConnect.swift; sourceTree = "<group>"; };
+		5B2513D82867ACFE00ABF7C7 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		5B2513DA2867C7CB00ABF7C7 /* HandshakeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandshakeViewController.swift; sourceTree = "<group>"; };
+		5B2513DC2867CB9500ABF7C7 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		5B2513DE2867CBC800ABF7C7 /* ActionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionsViewController.swift; sourceTree = "<group>"; };
+		5B2513E02867D76500ABF7C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		5B2513E9286807CA00ABF7C7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5B2513EB28680EC400ABF7C7 /* ShakeEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeEffect.swift; sourceTree = "<group>"; };
+		5B2513ED28681D3B00ABF7C7 /* FrensView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrensView.swift; sourceTree = "<group>"; };
+		5B2513EF286820C200ABF7C7 /* ImportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5B2513BF2867742300ABF7C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B2513D52867873000ABF7C7 /* WalletConnectSwift in Frameworks */,
+				5B2513E32868004000ABF7C7 /* Alamofire in Frameworks */,
+				5B2513E6286802F800ABF7C7 /* FirebaseFirestoreSwift in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5B2513B92867742300ABF7C7 = {
+			isa = PBXGroup;
+			children = (
+				5B2513C42867742300ABF7C7 /* PPAP */,
+				5B2513C32867742300ABF7C7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5B2513C32867742300ABF7C7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5B2513C22867742300ABF7C7 /* PPAP.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5B2513C42867742300ABF7C7 /* PPAP */ = {
+			isa = PBXGroup;
+			children = (
+				5B2513CB2867742400ABF7C7 /* Preview Content */,
+				5B2513E02867D76500ABF7C7 /* Info.plist */,
+				5B2513E9286807CA00ABF7C7 /* GoogleService-Info.plist */,
+				5B2513C92867742400ABF7C7 /* Assets.xcassets */,
+				5B2513C52867742300ABF7C7 /* PPAPApp.swift */,
+				5B2513C72867742300ABF7C7 /* MainView.swift */,
+				5B2513EF286820C200ABF7C7 /* ImportView.swift */,
+				5B2513ED28681D3B00ABF7C7 /* FrensView.swift */,
+				5B2513D62867A96C00ABF7C7 /* WalletConnect.swift */,
+				5B2513D82867ACFE00ABF7C7 /* Extensions.swift */,
+				5B2513EB28680EC400ABF7C7 /* ShakeEffect.swift */,
+				5B2513DC2867CB9500ABF7C7 /* MainViewController.swift */,
+				5B2513DA2867C7CB00ABF7C7 /* HandshakeViewController.swift */,
+				5B2513DE2867CBC800ABF7C7 /* ActionsViewController.swift */,
+			);
+			path = PPAP;
+			sourceTree = "<group>";
+		};
+		5B2513CB2867742400ABF7C7 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				5B2513CC2867742400ABF7C7 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5B2513C12867742300ABF7C7 /* PPAP */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B2513D02867742400ABF7C7 /* Build configuration list for PBXNativeTarget "PPAP" */;
+			buildPhases = (
+				5B2513BE2867742300ABF7C7 /* Sources */,
+				5B2513BF2867742300ABF7C7 /* Frameworks */,
+				5B2513C02867742300ABF7C7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PPAP;
+			packageProductDependencies = (
+				5B2513D42867873000ABF7C7 /* WalletConnectSwift */,
+				5B2513E22868004000ABF7C7 /* Alamofire */,
+				5B2513E5286802F800ABF7C7 /* FirebaseFirestoreSwift */,
+			);
+			productName = PPAP;
+			productReference = 5B2513C22867742300ABF7C7 /* PPAP.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5B2513BA2867742300ABF7C7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					5B2513C12867742300ABF7C7 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 5B2513BD2867742300ABF7C7 /* Build configuration list for PBXProject "PPAP" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5B2513B92867742300ABF7C7;
+			packageReferences = (
+				5B2513D32867873000ABF7C7 /* XCRemoteSwiftPackageReference "WalletConnectSwift" */,
+				5B2513E12868004000ABF7C7 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				5B2513E4286802F800ABF7C7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
+			productRefGroup = 5B2513C32867742300ABF7C7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5B2513C12867742300ABF7C7 /* PPAP */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5B2513C02867742300ABF7C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B2513CD2867742400ABF7C7 /* Preview Assets.xcassets in Resources */,
+				5B2513CA2867742400ABF7C7 /* Assets.xcassets in Resources */,
+				5B2513EA286807CA00ABF7C7 /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5B2513BE2867742300ABF7C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B2513DF2867CBC800ABF7C7 /* ActionsViewController.swift in Sources */,
+				5B2513C82867742300ABF7C7 /* MainView.swift in Sources */,
+				5B2513C62867742300ABF7C7 /* PPAPApp.swift in Sources */,
+				5B2513DB2867C7CB00ABF7C7 /* HandshakeViewController.swift in Sources */,
+				5B2513DD2867CB9500ABF7C7 /* MainViewController.swift in Sources */,
+				5B2513F0286820C200ABF7C7 /* ImportView.swift in Sources */,
+				5B2513EC28680EC400ABF7C7 /* ShakeEffect.swift in Sources */,
+				5B2513EE28681D3B00ABF7C7 /* FrensView.swift in Sources */,
+				5B2513D72867A96C00ABF7C7 /* WalletConnect.swift in Sources */,
+				5B2513D92867ACFE00ABF7C7 /* Extensions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		5B2513CE2867742400ABF7C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5B2513CF2867742400ABF7C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5B2513D12867742400ABF7C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"PPAP/Preview Content\"";
+				DEVELOPMENT_TEAM = 7GZ6S2A5JD;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PPAP/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Frens;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ppap.PPAP;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5B2513D22867742400ABF7C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"PPAP/Preview Content\"";
+				DEVELOPMENT_TEAM = 7GZ6S2A5JD;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PPAP/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Frens;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ppap.PPAP;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5B2513BD2867742300ABF7C7 /* Build configuration list for PBXProject "PPAP" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B2513CE2867742400ABF7C7 /* Debug */,
+				5B2513CF2867742400ABF7C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5B2513D02867742400ABF7C7 /* Build configuration list for PBXNativeTarget "PPAP" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B2513D12867742400ABF7C7 /* Debug */,
+				5B2513D22867742400ABF7C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5B2513D32867873000ABF7C7 /* XCRemoteSwiftPackageReference "WalletConnectSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/WalletConnect/WalletConnectSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		5B2513E12868004000ABF7C7 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		5B2513E4286802F800ABF7C7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5B2513D42867873000ABF7C7 /* WalletConnectSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5B2513D32867873000ABF7C7 /* XCRemoteSwiftPackageReference "WalletConnectSwift" */;
+			productName = WalletConnectSwift;
+		};
+		5B2513E22868004000ABF7C7 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5B2513E12868004000ABF7C7 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		5B2513E5286802F800ABF7C7 /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5B2513E4286802F800ABF7C7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 5B2513BA2867742300ABF7C7 /* Project object */;
+}
