@@ -14,16 +14,17 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
-const addImageUri = async (address:string, image_uri :string) => {
+const addImageUri = async (address:string, image_uri :string, chain :string) => {
   await setDoc(doc(db, 'verifiedAddress', address), {
     address: address,
-    image_uri: image_uri
+    image_uri: image_uri,
+    chain: chain
   });
 };
 
 
 const handler = (req: NextApiRequest, res: NextApiResponse) => {
-  addImageUri(req.body.address, req.body.image_uri);
+  addImageUri(req.body.address, req.body.image_uri, req.body.chain);
   console.log(req.body);
 };
 export default handler;
