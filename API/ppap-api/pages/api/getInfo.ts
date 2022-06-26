@@ -22,6 +22,13 @@ const getImageUri = async (address :string) => {
   return imageUri;
 }
 
+const getChain = async (address :string) => {
+  const docRef = doc(db, 'verifiedAddress', address)
+  const docSnap = await getDoc(docRef);
+  const chainInfo = await docSnap.get('chain');
+  return chainInfo;
+}
+
 const provider = new ethers.providers.JsonRpcProvider(process.env.API_URL)
 
 const checkENS = async (address :string) => {
@@ -33,10 +40,12 @@ const checkENS = async (address :string) => {
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   const ensName = await checkENS(req.body.address);
   const imageUri = await getImageUri(req.body.address);
+  const chain = await getChain(req.body.address);
   console.log(imageUri);
   const data = {
     'ensName': ensName,
-    'imageUri': imageUri
+    'imageUri': imageUri,
+    'chain': chain
   }
   console.log(data);
   res.status(200).send(data);
