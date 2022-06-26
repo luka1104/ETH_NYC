@@ -24,7 +24,8 @@ const test = () => {
   const handleImage = () => {
     const data = {
       'address': '0x50B80aa3877fC852f3194a0331177FDDcF0891bf',
-      'image_uri': 'https://api-us-west1.tatum.io/v3/ipfs/bafybeictvixj4ayyryj7jwvzsmtodiwafh4ghhkfudl3bt2cugafkjngg4'
+      'image_uri': 'https://api-us-west1.tatum.io/v3/ipfs/bafybeictvixj4ayyryj7jwvzsmtodiwafh4ghhkfudl3bt2cugafkjngg4',
+      'chain': 'optimism'
     }
     fetch(`/api/storeimage`, {
       method: 'POST',
@@ -67,12 +68,15 @@ const test = () => {
   }
 
   const handleUri = () => {
-    fetch(`/api/opt_metadata`, {
+    const data = {
+      'address': "0x50B80aa3877fC852f3194a0331177FDDcF0891bf"
+    }
+    fetch(`/api/metadata`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify("0x50B80aa3877fC852f3194a0331177FDDcF0891bf"),
+      body: JSON.stringify(data),
     });
   }
 

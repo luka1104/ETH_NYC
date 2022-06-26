@@ -23,8 +23,9 @@ const addImageUri = async (address:string, image_uri :string, chain :string) => 
 };
 
 
-const handler = (req: NextApiRequest, res: NextApiResponse) => {
-  addImageUri(req.body.address, req.body.image_uri, req.body.chain);
+const handler = async (req: NextApiRequest, res: NextApiResponse) => {
+  await addImageUri(req.body.address, req.body.image_uri, req.body.chain);
   console.log(req.body);
+  res.status(200).send('');
 };
 export default handler;
