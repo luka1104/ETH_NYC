@@ -10,7 +10,7 @@ const checkENS = async (address :string) => {
 }
 
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
-  const ensName = await checkENS(req.body);
+  const ensName = await checkENS(req.body.address);
   if(ensName) {
     console.log(ensName);
     res.status(200).send(ensName);

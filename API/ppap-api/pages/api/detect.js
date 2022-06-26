@@ -46,7 +46,9 @@ const handler = async (req, res) => {
   }
 
   if (found) {
-    console.log('Transfering');
+    console.log('minting');
+    console.log(found);
+    console.log(req.body);
   } else {
     console.log('Adding');
     detections[req.body] = now;
