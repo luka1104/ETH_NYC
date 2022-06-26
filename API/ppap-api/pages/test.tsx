@@ -82,8 +82,7 @@ const test = () => {
 
   const handleInfo = () => {
     const data = {
-      'address': "0x50B80aa3877fC852f3194a0331177FDDcF0891bf",
-      'chain': 'polygon'
+      'address': "0x50B80aa3877fC852f3194a0331177FDDcF0891bf"
     }
     fetch(`/api/getInfo`, {
       method: 'POST',
