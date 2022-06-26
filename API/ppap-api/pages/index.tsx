@@ -7,12 +7,12 @@ import {
   Button
 } from '@chakra-ui/react';
 import styles from '../styles/Home.module.css'
-import { useRouter } from "next/router";
+import { ethers } from 'ethers'
 
+const provider = new ethers.providers.JsonRpcProvider(process.env.API_URL)
 
 const Home: NextPage = () => {
   var ethereum_address = require('ethereum-address');
-  const { query } = useRouter();
   const [address, setAddress] = useState<string>('')
   const handleInputChange = (e:any) => {
     const val = e.target.value;
@@ -28,6 +28,13 @@ const Home: NextPage = () => {
       body: JSON.stringify(address),
     });
   }
+
+  const handleENS = async () => {
+    const res = await provider.resolveName(address);
+    console.log(res);
+
+    setAddress(res as string);
+  }
   return (
     <div className={styles.container}>
       <Head>
@@ -40,7 +47,7 @@ const Home: NextPage = () => {
         <Input
           type='text'
           fontFamily='Dm Sans'
-          placeholder='Wallet Address'
+          placeholder='Wallet Address or ENS'
           value={address}
           onChange={(e) => {handleInputChange(e)}}
           w="50%"
@@ -49,26 +56,21 @@ const Home: NextPage = () => {
           <div id="world-id-container">
             <Link
               fontFamily='Dm Sans'
-              href={`https://developer.worldcoin.org/hosted/wid_68e8cff610043f0b03888aa7fcf1907e?signal=${address}`}
+              href={`${process.env.WORLD_ID_URI}${address}`}
             >
               Verify with World ID
             </Link>
           </div>
         ) : (
-          <></>
-        )}
-        {query.success === "true" ? (
+          // <Link
+          //   fontFamily='Dm Sans'
+          //   href={`https://developer.worldcoin.org/hosted/wid_68e8cff610043f0b03888aa7fcf1907e?signal=${address}`}
+          // >
+          //   Verify with World ID
+          // </Link>
           <Button
-            onClick={handleClick}
-          >
-            Get Verification
-          </Button>
-        ) : (
-          <Button
-            disabled
-          >
-            Get Verification
-          </Button>
+          onClick={handleENS}
+          >use ENS</Button>
         )}
       </main>
     </div>

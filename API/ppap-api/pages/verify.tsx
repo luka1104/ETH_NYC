@@ -1,39 +1,27 @@
 import React from 'react'
 import { useRouter } from "next/router";
-import jwt from 'jsonwebtoken';
-// const jwksClient = require('jwks-rsa');
-// console.log(jwksClient);
-const njwk = require('node-jwk');
-
-
-
-//const client = jwksClient({ jwksUri: 'https://developer.worldcoin.org/api/v1/jwks'});
+import * as jose from 'jose';
 
 const Verify = () => {
   const { query } = useRouter();
   const token = query.verification_jwt || "";
 
-  // const getKey = (header:any, callback:any) => {
-  //   client.getSigningKey(header.kid, function(err:any, key:any) {
-  //     const signingKey = key.publicKey || key.rsaPublicKey;
-  //     callback(null, signingKey);
-  //   })
-  // }
   const verify = async () => {
-    const jsonKey = await (await fetch('https://developer.worldcoin.org/api/v1/jwks')).json()
-   const myKey = njwk.JWK.fromObject(jsonKey.keys[0]);
-   console.log(myKey)
-
-  const options: jwt.VerifyOptions = {algorithms: ['PS256']}
-
-  jwt.verify(token as string, myKey._key.toPublicKeyPEM(), options, function(err:any, decoded) {
-    console.log(decoded);
-    console.log("err",err);
-    
-    if((decoded as jwt.JwtPayload)?.verified) {
-      console.log("success");
+    const jsonKeys = await (await fetch('https://developer.worldcoin.org/api/v1/jwks')).json()
+    const publicKey = await jose.importJWK(jsonKeys.keys[0], "PS256")
+  // @ts-ignore
+    const {payload} = await jose.jwtVerify(token, publicKey, {issuer: 'https://developer.worldcoin.org'});
+    console.log(payload.verified);
+    console.log(payload.signal);
+    if(payload.verified === true) {
+      fetch(`/api/verify`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(payload.signal),
+      });
     }
-  });
   }
  
   const handleClick = () => {
