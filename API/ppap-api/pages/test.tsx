@@ -35,22 +35,34 @@ const test = () => {
     });
   }
   const handleDetect = () => {
+    const data = {
+      'address': "0x50B80aa3877fC852f3194a0331177FDDcF0891bf",
+      'chain': 'polygon'
+    }
+    const data2 = {
+      'address': "0x872449c44937f6ac266cbbcdcb189b25acebb9e9",
+      'chain': 'optimism'
+    }
     fetch(`/api/detect`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify("0x872449c44937f6ac266cbbcdcb189b25acebb9e9"),
+      body: JSON.stringify(data),
     });
   }
 
   const handleMint = () => {
-    fetch(`/api/opt_mint`, {
+    const data = {
+      'address': "0x50B80aa3877fC852f3194a0331177FDDcF0891bf",
+      'chain': 'polygon'
+    }
+    fetch(`/api/mint`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify("0x50B80aa3877fC852f3194a0331177FDDcF0891bf"),
+      body: JSON.stringify(data),
     });
   }
 
