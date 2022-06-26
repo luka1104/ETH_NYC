@@ -32,7 +32,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     res.status(200).send({verified: true});
   } else {
     console.log(resp);
-    res.status(200).send({verified: false});;
+    res.status(200).send({verified: false});
   }
   console.log(req.body);
 };

@@ -15,6 +15,6 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/verify.tsx", "pages/api/detect.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/verify.tsx", "pages/api/detect.ts", "pages/api/mumbai_metadata.js"],
   "exclude": ["node_modules"]
 }

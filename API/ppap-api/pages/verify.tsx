@@ -75,6 +75,16 @@ const Verify = () => {
       body: JSON.stringify("0x50B80aa3877fC852f3194a0331177FDDcF0891bf"),
     });
   }
+
+  const handleUri = () => {
+    fetch(`/api/opt_metadata`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify("0x50B80aa3877fC852f3194a0331177FDDcF0891bf"),
+    });
+  }
   
 
   return (
@@ -104,6 +114,11 @@ const Verify = () => {
         onClick={handleMint}
       >
         mint
+      </button>
+      <button
+        onClick={handleUri}
+      >
+        get metadata
       </button>
     </div>
   )
