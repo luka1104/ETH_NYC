@@ -1,7 +1,7 @@
 import { ethers } from 'ethers'
 import { NextApiRequest, NextApiResponse } from 'next';
 
-const provider = new ethers.providers.JsonRpcProvider(process.env.API_URL)
+const provider = new ethers.providers.JsonRpcProvider(process.env.RINKEBY_RPC)
 
 const checkENS = async (address :string) => {
   var ensName = await provider.lookupAddress(address);
