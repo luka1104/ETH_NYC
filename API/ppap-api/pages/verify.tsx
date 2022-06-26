@@ -18,6 +18,7 @@ const Verify = () => {
     const {payload} = await jose.jwtVerify(token, publicKey, {issuer: 'https://developer.worldcoin.org'});
     console.log(payload.verified);
     console.log(payload.signal);
+    const signal = payload.signal as string;
     if(payload.verified === true) {
       setVerified(payload.verified);
       fetch(`/api/verify`, {
@@ -25,7 +26,7 @@ const Verify = () => {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(payload.signal),
+        body: JSON.stringify(signal.toLowerCase()),
       });
     }
   }
