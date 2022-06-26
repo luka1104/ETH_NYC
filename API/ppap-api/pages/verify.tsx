@@ -37,7 +37,9 @@ const Verify = () => {
     <>
       {verified ? (
         <Center>
-          <Text>
+          <Text
+           justifyContent="center"
+          >
             Verified!! You Can Use The App Now.
           </Text>
         </Center>

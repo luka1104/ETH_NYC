@@ -75,6 +75,20 @@ const test = () => {
       body: JSON.stringify("0x50B80aa3877fC852f3194a0331177FDDcF0891bf"),
     });
   }
+
+  const handleInfo = () => {
+    const data = {
+      'address': "0x50B80aa3877fC852f3194a0331177FDDcF0891bf",
+      'chain': 'polygon'
+    }
+    fetch(`/api/getInfo`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    });
+  }
   
 
   return (
@@ -104,6 +118,12 @@ const test = () => {
         onClick={handleUri}
       >
         get metadata
+      </button>
+
+      <button
+        onClick={handleInfo}
+      >
+        get data
       </button>
     </div>
   )
