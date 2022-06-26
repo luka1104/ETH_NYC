@@ -36,7 +36,7 @@ const mintToken = async (req, found) => {
       'address_pri': req.body.address,
       'address_sec': found
     }
-    const pol_res = await fetch(`http://localhost:3000/api/mint`, {
+    const pol_res = await fetch(`https://eth-nyc.vercel.app/api/mint`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -49,7 +49,7 @@ const mintToken = async (req, found) => {
       'address_pri': req.body.address,
       'address_sec': found
     }
-    const opt_res = await fetch(`http://localhost:3000/api/opt_mint`, {
+    const opt_res = await fetch(`https://eth-nyc.vercel.app/api/opt_mint`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -86,7 +86,7 @@ const handler = async (req, res) => {
         'address_pri': found,
         'address_sec': req.body.address
       }
-      fetch(`http://localhost:3000/api/mint`, {
+      fetch(`https://eth-nyc.vercel.app/api/mint`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -98,7 +98,7 @@ const handler = async (req, res) => {
         'address_pri': found,
         'address_sec': req.body.address
       }
-      fetch(`http://localhost:3000/api/opt_mint`, {
+      fetch(`https://eth-nyc.vercel.app/api/opt_mint`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
