@@ -16,7 +16,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     res.status(200).send(ensName);
   } else {
     console.log(ensName);
-    res.status(201).send(null);
+    res.status(200).send(null);
   }
   console.log(req.body);
 };

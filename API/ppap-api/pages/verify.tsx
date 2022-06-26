@@ -67,7 +67,7 @@ const Verify = () => {
   }
 
   const handleMint = () => {
-    fetch(`/api/mint`, {
+    fetch(`/api/opt_mint`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
