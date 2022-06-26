@@ -9,7 +9,8 @@ import {
 import styles from '../styles/Home.module.css'
 import { ethers } from 'ethers'
 
-const provider = new ethers.providers.JsonRpcProvider(process.env.API_URL)
+console.log(process.env.RINKEBY_RPC);
+const provider = new ethers.providers.JsonRpcProvider(process.env.RINKEBY_RPC)
 
 const Home: NextPage = () => {
   var ethereum_address = require('ethereum-address');
