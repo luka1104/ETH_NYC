@@ -29,10 +29,10 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   const resp = await checkIsVerified(req.body);
   if(resp) {
     console.log(resp);
-    res.status(200).send("address is verified");
+    res.status(200).send({verified: true});
   } else {
     console.log(resp);
-    res.status(201).send("address is not verified");
+    res.status(200).send({verified: false});;
   }
   console.log(req.body);
 };

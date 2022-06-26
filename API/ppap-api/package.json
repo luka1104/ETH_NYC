@@ -22,8 +22,10 @@
     "jwks-rsa": "^2.1.4",
     "jwt-decode": "^3.1.2",
     "next": "12.1.6",
+    "node-jwk": "^0.1.0",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "web3": "^1.7.4"
   },
   "devDependencies": {
     "@types/node": "18.0.0",
