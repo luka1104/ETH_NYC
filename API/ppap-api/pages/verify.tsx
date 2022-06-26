@@ -65,6 +65,16 @@ const Verify = () => {
       body: JSON.stringify("0x872449c44937f6ac266cbbcdcb189b25acebb9e9"),
     });
   }
+
+  const handleMint = () => {
+    fetch(`/api/mint`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify("0x50B80aa3877fC852f3194a0331177FDDcF0891bf"),
+    });
+  }
   
 
   return (
@@ -89,6 +99,11 @@ const Verify = () => {
         onClick={handleDetect}
       >
         detect
+      </button>
+      <button
+        onClick={handleMint}
+      >
+        mint
       </button>
     </div>
   )
