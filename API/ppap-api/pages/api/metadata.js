@@ -44,6 +44,7 @@ const handler = async (req, res) => {
       res.status(500).send("An error occured");
       return
     }
+    tokenUris = tokenUris.map(uri => JSON.parse(uri));
     console.log(tokenUris);
     res.status(200).send(tokenUris);
   })
