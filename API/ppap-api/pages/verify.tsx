@@ -1,8 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useRouter } from "next/router";
+import {
+  Center,
+  Text
+} from '@chakra-ui/react'
 import * as jose from 'jose';
 
 const Verify = () => {
+  const [verified, setVerified] = useState(false);
   const { query } = useRouter();
   const token = query.verification_jwt || "";
 
@@ -14,6 +19,7 @@ const Verify = () => {
     console.log(payload.verified);
     console.log(payload.signal);
     if(payload.verified === true) {
+      setVerified(payload.verified);
       fetch(`/api/verify`, {
         method: 'POST',
         headers: {
@@ -29,6 +35,16 @@ const Verify = () => {
   }
   return (
     <>
+      {verified ? (
+        <Center>
+          <Text>
+            Verified!! You Can Use The App Now.
+          </Text>
+        </Center>
+      ) : (
+        <>
+        </>
+      )}
     </>
   )
 }
